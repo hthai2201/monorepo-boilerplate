@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-storysource',
     'storybook-addon-next-router',
+    '@storybook/preset-scss',
     {
       name: '@storybook/addon-postcss',
       options: {

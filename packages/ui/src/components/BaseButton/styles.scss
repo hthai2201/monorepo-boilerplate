@@ -1,0 +1,64 @@
+.kui-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5625rem 1rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  // will replace by theme later
+  --color-mint: #00b0b3;
+  --color-dark-mint: #158793;
+  --color-grey200: #e7ecef;
+  --color-grey400: #bfc9cf;
+  --color-white: #fff;
+
+  //variants solid
+  &--solid {
+    background-color: var(--color-mint);
+    color: var(--color-white);
+    &:hover {
+      background-color: var(--color-dark-mint);
+      color: var(--color-white);
+    }
+    &[disabled] {
+      background-color: var(--color-grey200);
+      color: var(--color-grey400);
+    }
+  }
+  //variants text
+  &--text {
+    color: var(--color-mint);
+    &:hover {
+      color: var(--color-dark-mint);
+    }
+    &:disabled {
+      background-color: unset;
+      color: var(--color-grey400);
+    }
+  }
+  //variants outlined
+  &--outlined {
+    color: var(--color-mint);
+    border-color: var(--color-mint);
+    &:hover {
+      color: var(--color-dark-mint);
+      border-color: var(--color-dark-mint);
+    }
+    &:disabled {
+      background-color: transparent;
+      color: var(--color-grey400);
+      border-color: var(--color-grey200);
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    user-select: none;
+  }
+}
